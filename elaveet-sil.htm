@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #inputs {
+        padding: 0;
+        list-style: none;   
+        li{
+            margin-top: 5px; 
+        }
+      }
+    </style>
+</head>
+<body>
+    <button onclick="remove()">-</button>
+    <button onclick="add()">+</button>
+    <ul id="inputs"></ul>
+    <script>
+        const inputs = document.getElementById("inputs")
+        let arr = 0
+        function add(){
+            arr++
+            show()
+        }
+        
+        function remove(){
+            arr--
+            show()
+        }
+        function show(){
+            let kod = ""
+            for( let i=0; i < arr ;i++) {
+                kod += `<li><input type="text" value="Solmaz"/></li>`
+            }
+            inputs.innerHTML = kod
+        }
+    </script>
+</body>
+</html>

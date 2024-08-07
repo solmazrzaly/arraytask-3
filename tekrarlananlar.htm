@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,3,8,5,1,2,6,3,9]
+        const tekrar = []
+
+        function tekrarlanma(){
+            for(let i=0 ; i<arr.length ; i++){
+                let say = 0
+                for (let j = 0 ; j < arr.length ; j++){
+                    if( arr[i] == arr[j]){
+                        say++
+                    }
+                }
+                if(say > 1){
+                    tekrar.push(arr[i])
+                }
+            }
+        }
+        tekrarlanma()
+        concole.log(tekrar)
+    </script>
+    
+</body>
+</html>
